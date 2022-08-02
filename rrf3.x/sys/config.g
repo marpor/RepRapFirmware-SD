@@ -108,14 +108,28 @@ M950 F6 C"duex.fan6"
 M950 F7 C"duex.fan7"
 M950 F8 C"duex.fan8"
 
-M106 P1 S255 H1 T70				; T0 HE
-M106 P2 S0						; T0 PCF
-M106 P3 S255 H2 T70 			; T1 HE
-M106 P4 S0						; T1 PCF 
-M106 P5 S255 H3 T70 			; T2 HE 
-M106 P6 S0 						; T2 PCF
-M106 P7 S255 H4 T70				; T3 HE
-M106 P8 S0						; T3 PCF
+; M106 - Fan On
+; Pnnn Fan number (optional, defaults to 0). Relates to the fan number created by M950
+; Snnn Fan speed (0 to 255 or 0.0 to 1.0))
+; Lnnn Set the minimum fan speed (0 to 255 or 0.0 to 1.0) when a non-zero fan speed is requested.
+; Xnnn Set the maximum fan speed (0 to 255 or 0.0 to 1.0) when a non-zero fan speed is requested.
+; Bnnn Blip time - fan will be run at full PWM for this number of seconds when started from standstill. Default is B0.1 which means that there is a 100ms burst after starting the fan.
+; Hnn:nn:nn... Enable thermostatic mode and select sensor monitored. H-1 disables thermostatic mode. Relates to the sensor number(s) created by M308.
+; Rnnn Restore fan speed to the value it has when the print was paused (R1) or the last time the fan speed was set and no P parameter was provided (R2).
+; Tnnn or Tnn:nn Set thermostatic mode trigger temperature, or temperature control range
+; C"name" Set custom name for this fan (supported in RRF >= 2.01)
+
+; Heatsink fans
+M106 P1 S0.5 H1 T70 C"T0 HE"
+M106 P3 S0.5 H2 T70 C"T1 HE"
+M106 P5 S0.5 H3 T70 C"T2 HE"
+M106 P7 S0.5 H4 T70 C"T3 HE"
+
+; Part Cooling Fans (PCF)
+M106 P2 S0 C"T0 PCF"
+M106 P4 S0 C"T1 PCF"
+M106 P6 S0 C"T2 PCF"
+M106 P8 S0 C"T3 PCF"
 
 M593 F42.2						; cancel ringing at 42.2Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
 ;M376 H15						; bed compensation taper
