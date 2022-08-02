@@ -24,15 +24,15 @@ M569 P1 S0 						; Drive 1 Y
 M569 P2 S1 						; Drive 2 Z
 M569 P3 S0 						; Drive 3 E0
 M569 P4 S0 						; Drive 4 E1
-M569 P5 S1 						; Drive 5 E2
-M569 P6 S1 						; Drive 6 E3
+M569 P5 S0 						; Drive 5 E2
+M569 P6 S0 						; Drive 6 E3
 M569 P7 S0 						; Drive 7 COUPLER
 M569 P8 S0 						; Drive 8 UNUSED
 M569 P9 S0 						; Drive 9 UNUSED
 
 M584 X0 Y1 Z2 C7 E3:4:5:6 								; Apply custom drive mapping
-M208 X-35:328.5 Y-49:243 Z0:300 C-45:360	 				; Set axis maxima & minima
-M92 X100 Y100 Z1600 C91.022 E834:834:834:834				; Set steps per mm assuming x16 microstepping
+M208 X-35:328.5 Y-49:243 Z0:270 C-45:360	 			; Set axis maxima & minima
+M92 X100 Y100 Z800 C91.022 E409:409:409:409				; Set steps per mm assuming x16 microstepping
 M350 E16:16:16:16 I1 									; Configure microstepping with interpolation
 M350 C16 I10											; Configure microstepping without interpolation
 M350 X16 Y16 Z16 I1										; Configure microstepping with interpolation
