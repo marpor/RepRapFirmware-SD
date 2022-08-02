@@ -79,23 +79,26 @@ M143 H4 S305 													; Set temperature limit for heater 4 to 300C
 
 
 ; Tools
-M563 P0 S"T0" D0 H1 F2 					; Define tool 0
+M563 P0 S"T0" D0 H1 F2 					; Define tool 0 - extruder 0, heater 1 and fan 2
 G10 P0 X0 Y0 Z0 						; Reset tool 0 axis offsets
 G10 P0 R0 S0 							; Reset initial tool 0 active and standby temperatures to 0C
 
-M563 P1 S"T1" D1 H2 F4 					; Define tool 1
+M563 P1 S"T1" D1 H2 F4 					; Define tool 1 - extruder 1, heater 2 and fan 4
 G10 P1 X0 Y0 Z0 						; Reset tool 1 axis offsets
 G10 P1 R0 S0 							; Reset initial tool 1 active and standby temperatures to 0C
 
-M563 P2 S"T2" D2 H3 F6 					; Define tool 2
+M563 P2 S"T2" D2 H3 F6 					; Define tool 2 - extruder 2, heater 3 and fan 6
 G10 P2 X0 Y0 Z0 						; Reset tool 2 axis offsets
 G10 P2 R0 S0 							; Reset initial tool 2 active and standby temperatures to 0C
 
-M563 P3 S"T3" D3 H4 F8 					; Define tool 3
+M563 P3 S"T3" D3 H4 F8 					; Define tool 3 - extruder 3, heater 4 and fan 8
 G10 P3 X0 Y0 Z0 						; Reset tool 3 axis offsets
 G10 P3 R0 S0 							; Reset initial tool 3 active and standby temperatures to 0C
 
-; Fans
+; Fan mapping
+; Fnn Fan number
+; C"name" Pin name(s) and optional inversion status. Pin name "nil" frees up the pin. A leading '!' character inverts the input or output. A leading '^' character enables the pullup resistor1. The '^' and '!' characters may be placed in either order.
+; Pin Names: https://docs.duet3d.com/User_manual/RepRapFirmware/Migration_RRF2_to_RRF3#pin-names
 M950 F1 C"fan1"
 M950 F2 C"fan2"
 M950 F3 C"duex.fan3"
