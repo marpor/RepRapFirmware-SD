@@ -7,10 +7,13 @@ G91 							; Relative mode
 G1 H2 Z5 F5000					; Lower the bed
 G90								; back to absolute positioning
 
-G1 X150 Y100 F50000				; Position the endstop above the bed centre
+G1 X150 Y150 F50000				; Position the endstop above the bed centre
+
+M913 Z40						; drop motor current - this avoids bending the tool if it is still mounted
 
 M558 F1000
 G30
 M558 F300
 G30
 
+M913 Z50 						; current back up - we don't need full current, ever
