@@ -122,10 +122,10 @@ M593 F42.2						; cancel ringing at 42.2Hz (https://forum.e3d-online.com/threads
 ; Volcano-tool: X-9 Y39 Z-13.5
 ; Hemera-tool: X20 Y43.5 Z-6
 
-G10 P0 X-9 Y39 Z-5					; T0
-G10 P1 X-9 Y39 Z-5					; T1
-G10 P2 X-9 Y39 Z-5					; T2
-G10 P3 X-9 Y39 Z-5					; T3
+G10 P0 X20.00 Y44.00 Z-5.65				; T0
+G10 P1 X19.40 Y43.90 Z-5.95				; T1
+G10 P2 X19.75 Y44.25 Z-6.07				; T2
+G10 P3 X19.65 Y44.25 Z-5.95				; T3
 
 ;M572 D0 S0.2 						; pressure advance T0
 ;M572 D1 S0.2 						; pressure advance T1
