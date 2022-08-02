@@ -3,3 +3,4 @@ rrf3.x/sys/resurrect.g
 *.json
 *.csv
 *.gz
+*.bak
