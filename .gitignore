@@ -1,0 +1,5 @@
+rrf3.x/sys/resurrect.g
+*.bin
+*.json
+*.csv
+*.gz
