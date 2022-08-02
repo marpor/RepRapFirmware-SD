@@ -15,7 +15,7 @@ M550 P"ToolChanger" 			; Set machine name
 ;M552 S1 P"ssid"				; Enable WiFi Networking
 M552 S1							; Enable Networking
 M586 P0 S1 						; Enable HTTP
-M586 P1 S0 						; Disable FTP
+M586 P1 S1 						; Disable FTP
 M586 P2 S0 						; Disable Telnet
 
 ; Drive direction
