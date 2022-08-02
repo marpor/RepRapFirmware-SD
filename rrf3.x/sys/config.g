@@ -60,20 +60,21 @@ M950 H0 C"bedheat" T0											; Bed heater
 M143 H0 S225 													; Set temperature limit for heater 0 to 225C
 M140 H0															; Bed heater is heater 0
 
+; Note R2200 on Duex5 rev 0.11 forward (see https://docs.duet3d.com/Duet3D_hardware/Duet_2_family/DueX2_and_DueX5). Should be automatic from RRF3.4
 M308 S1 P"e0temp" Y"thermistor" A"T0" T100000 B4725 C7.06e-8 	; Set thermistor
 M950 H1 C"e0heat" T1											; Extruder 0 heater
 M143 H1 S305 													; Set temperature limit for heater 1 to 300C
 
 M308 S2 P"e1temp" Y"thermistor" A"T1" T100000 B4725 C7.06e-8 	; Set thermistor
-M950 H2 C"e1heat" T2											; Extruder 0 heater
+M950 H2 C"e1heat" T2											; Extruder 1 heater
 M143 H2 S305 													; Set temperature limit for heater 2 to 300C
 
-M308 S3 P"e2temp" Y"thermistor" A"T2" T100000 B4725 C7.06e-8 	; Set thermistor
-M950 H3 C"duex.e2heat" T3										; Extruder 0 heater
+M308 S3 P"e2temp" Y"thermistor" A"T2" T100000 B4725 C7.06e-8 R2200	; Set thermistor
+M950 H3 C"duex.e2heat" T3										; Extruder 2 heater
 M143 H3 S305 													; Set temperature limit for heater 3 to 300C
 
-M308 S4 P"e3temp" Y"thermistor" A"T3" T100000 B4725 C7.06e-8 	; Set thermistor
-M950 H4 C"duex.e3heat" T4										; Extruder 0 heater
+M308 S4 P"e3temp" Y"thermistor" A"T3" T100000 B4725 C7.06e-8 R2200 ; Set thermistor
+M950 H4 C"duex.e3heat" T4										; Extruder 3 heater
 M143 H4 S305 													; Set temperature limit for heater 4 to 300C
 
 
