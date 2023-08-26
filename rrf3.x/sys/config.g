@@ -32,7 +32,8 @@ M569 P9 S0 						; Drive 9 UNUSED
 
 M584 X0 Y1 Z2 C7 E3:4:5:6 								; Apply custom drive mapping
 M208 X-35:328.5 Y-49:243 Z0:270 C-45:360	 			; Set axis maxima & minima
-M92 X100 Y100 Z800 C91.022 E409:409:409:409				; Set steps per mm assuming x16 microstepping
+; 396 manual adjustment from 409 originally - after measuring 100mm filament extruded after E97
+M92 X100 Y100 Z800 C91.022 E396:396:396:396				; Set steps per mm assuming x16 microstepping
 M350 E16:16:16:16 I1 									; Configure microstepping with interpolation
 M350 C16 I10											; Configure microstepping without interpolation
 M350 X16 Y16 Z16 I1										; Configure microstepping with interpolation
