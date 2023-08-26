@@ -1,9 +1,9 @@
 M117 "Waiting for extruder to heat"
 ;M568 S210 R180 ; set active and standby temperatures 
-;M116 ; wait for extruder temp
 
-M109 S210
+M109 S210 ; Set extruder temp and wait
 ;G1 X0 Y210 F7200
+;M116 ; wait for extruder temp
 
 M83 ; extruder relative mode
 
