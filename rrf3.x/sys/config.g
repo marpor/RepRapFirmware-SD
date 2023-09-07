@@ -37,7 +37,7 @@ M92 X100 Y100 Z800 C91.022 E396:396:396:396				; Set steps per mm assuming x16 m
 M350 E16:16:16:16 I1 									; Configure microstepping with interpolation
 M350 C16 I10											; Configure microstepping without interpolation
 M350 X16 Y16 Z16 I1										; Configure microstepping with interpolation
-M566 X1000 Y1000 Z60 C2 E200:200:200:200				; Set maximum instantaneous speed changes (mm/min)
+M566 X100 Y100 Z60 C2 E200:200:200:200				; Set maximum instantaneous speed changes (mm/min)
 M203 X24000 Y24000 Z1200 C12000 E5000:5000:5000:5000	; Set maximum speeds (mm/min)
 M201 X2000 Y2000 Z400 C500 E2500:2500:2500:2500			; Set accelerations (mm/s^2)
 M906 X1800 Y1800 Z1330 I30   						; Idle motion motors to 30%
