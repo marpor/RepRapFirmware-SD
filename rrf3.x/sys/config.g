@@ -144,7 +144,7 @@ M593 P"zvdd" F42.8 S0.05        ; For Hemera tools: ZVDD damping at 42.8 Hz with
 ; Hemera-tool: X20 Y43.5 Z-6
 
 G10 P0 X20.00 Y44.00 Z-5.65				; T0
-G10 P1 X19.40 Y43.90 Z-5.95				; T1
+G10 P1 X19.40 Y43.90 Z-5.85				; T1
 G10 P2 X19.75 Y44.25 Z-6.07				; T2
 G10 P3 X19.65 Y44.25 Z-5.95				; T3
 
