@@ -134,7 +134,7 @@ M106 P4 S0 C"T1 PCF"
 M106 P6 S0 C"T2 PCF"
 M106 P8 S0 C"T3 PCF"
 
-M593 F42.2						; cancel ringing at 42.2Hz (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
+M593 P"zvdd" F42.8 S0.05        ; For Hemera tools: ZVDD damping at 42.8 Hz with a factor of 0.05 (https://forum.e3d-online.com/threads/accelerometer-and-resonance-measurements-of-the-motion-system.3445/)
 ;M376 H15						; bed compensation taper
 
 ;tool offsets
