@@ -159,3 +159,4 @@ T-1								      ; deselect tools
 
 M501                    ; load config-override.g
 
+G28						; Home all axes. NOTE: Be ready to CATCH THE TOOL if one is accidentally attached!!!
