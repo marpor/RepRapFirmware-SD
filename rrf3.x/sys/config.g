@@ -148,10 +148,10 @@ G10 P1 X19.40 Y43.90 Z-5.95				; T1
 G10 P2 X19.75 Y44.25 Z-6.07				; T2
 G10 P3 X19.65 Y44.25 Z-5.95				; T3
 
-;M572 D0 S0.2 						; pressure advance T0
-;M572 D1 S0.2 						; pressure advance T1
-;M572 D2 S0.2 						; pressure advance T2
-;M572 D3 S0.2 						; pressure advance T3
+M572 D0 S0.05 						; pressure advance T0
+M572 D1 S0.05 						; pressure advance T1
+M572 D2 S0.05 						; pressure advance T2
+M572 D3 S0.05 						; pressure advance T3
 
 M575 P1 S1 B57600				; Enable LCD
 G29 S2							    ; disable mesh
