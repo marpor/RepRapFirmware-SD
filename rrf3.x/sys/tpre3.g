@@ -1,21 +1,17 @@
 ; tpre3.g
 ; called before tool 3 is selected
 
+;Drop the bed
+G91
+G1 Z4 F1000
+G90
+
 ;Unlock Coupler
 M98 P"/macros/Coupler - Unlock"
 
 ;Move In
-G1 X302.5 Y150 F50000
-G1 X302.5 Y227 F2500
+G53 G1 X309.5 Y150 F50000
+G53 G1 Y227 F2500
 
 ;Close Coupler
 M98 P"/macros/Coupler - Lock"
-
-;WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
-;if you are using non-standard length hotends ensure the bed is lowered enough BEFORE undocking the tool!
-G91
-G1 Z10 F1000
-G90
-
-;Move Out
-G1 X302.5 Y150 F4000

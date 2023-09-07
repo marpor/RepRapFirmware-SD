@@ -2,7 +2,15 @@
 ; called after tool 3 has been selected
 
 ;heatup
-M116 P3
+;M116 P3
+
+;Move Out
+G53 G1 Y150 F4000
+
+; Raise bed again (since tfree)
+G91 ; Relative coords
+G1 Z-4 F1000
+G90 ; Absolute coords
 
 ;prime nozzle
 ;M98 P"prime.g"
